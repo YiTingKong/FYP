@@ -1,0 +1,53 @@
+﻿<%@ Master Language="VB" AutoEventWireup="false" CodeBehind="Admin.master.vb" Inherits="FYP.Admin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .label-style1 {
+            width: 196px;
+
+            height: 107px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div style="width: 938px; margin-left: 210px">
+        <div style="margin-left:767px; ">
+            <asp:LinkButton ID="lbChgPwrd" runat="server" Font-Size="Small" ForeColor="#B6B6B6">Change Password</asp:LinkButton>
+&nbsp;|
+        <asp:LinkButton ID="lbLogOut" runat="server" Font-Size="Small" ForeColor="#B6B6B6">Log Out</asp:LinkButton>
+        </div>
+        <img alt="logo" class="label-style1" src="../image/FYP logo.png" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;<asp:LinkButton ID="lbAdmin" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="X-Large" Font-Underline="False" ForeColor="Black">Admin</asp:LinkButton>
+        
+        &nbsp; |&nbsp;
+        <asp:LinkButton ID="lbMember" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="X-Large" Font-Underline="False" ForeColor="Black">Member</asp:LinkButton>
+&nbsp; |&nbsp;
+        <asp:LinkButton ID="lbTech" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="X-Large" Font-Underline="False" ForeColor="Black">Technician</asp:LinkButton>
+&nbsp; |&nbsp;
+        <asp:LinkButton ID="lbProduct" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="X-Large" Font-Underline="False" ForeColor="Black">Product</asp:LinkButton>
+&nbsp; |&nbsp;
+        <asp:LinkButton ID="lbMachines" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="X-Large" Font-Underline="False" ForeColor="Black">Machines</asp:LinkButton>
+&nbsp; |&nbsp;
+        <asp:LinkButton ID="lbReport" runat="server" Font-Bold="False" Font-Italic="False" Font-Size="X-Large" Font-Underline="False" ForeColor="Black">Report</asp:LinkButton>
+        &nbsp;<br />
+        ____________________________________________________________________________________________________________________<br />
+        <asp:ContentPlaceHolder ID="MainContent" runat="server">
+
+        </asp:ContentPlaceHolder>
+    </div>
+        <div style="margin-left: 211px; clear:both ; width: 939px; background-color: #228B22; height: 56px;">
+
+            <br />
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <asp:Label ID="Label1" runat="server" Font-Bold="True" ForeColor="White" Text="Copyright 2017 TRENDARY GROUP" Font-Size="Large"></asp:Label>
+
+        </div>
+    </form>
+</body>
+</html>
