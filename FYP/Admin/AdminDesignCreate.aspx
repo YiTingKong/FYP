@@ -18,7 +18,7 @@
                 <asp:TreeNode Text="Delete Design" Value="DD" NavigateUrl="~/Admin/AdminDesignDelete.aspx"></asp:TreeNode>
             </asp:TreeNode>
             <asp:TreeNode Text="Material" Value="Material" NavigateUrl="~/Admin/AdminColourCreate.aspx"></asp:TreeNode>
-        </Nodes>
+        </Nodes> 
     </asp:TreeView>
     </div>
     <div style="margin-top:50px; margin-left:150px; float:left; height:auto " aria-orientation="horizontal">
