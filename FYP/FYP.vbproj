@@ -1,0 +1,489 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{869FFCA3-E25B-461A-8CFF-311F7904D4D4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>FYP</RootNamespace>
+    <AssemblyName>FYP</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>FYP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>FYP.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.AI.Agent.Intercept, Version=2.0.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights, Version=2.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Admin\AdminChangePassword.aspx" />
+    <Content Include="Admin\AdminClothesCreate.aspx" />
+    <Content Include="Admin\AdminClothesDelete.aspx" />
+    <Content Include="Admin\AdminClothesUpdate.aspx" />
+    <Content Include="Admin\AdminColourCreate.aspx" />
+    <Content Include="Admin\AdminColourUpdate.aspx" />
+    <Content Include="Admin\AdminDesignVerify.aspx" />
+    <Content Include="Admin\AdminInfoCreate.aspx" />
+    <Content Include="Admin\AdminDesignCreate.aspx" />
+    <Content Include="Admin\AdminDesignDelete.aspx" />
+    <Content Include="Admin\AdminDesignUpdate.aspx" />
+    <Content Include="Admin\AdminDesignView.aspx" />
+    <Content Include="Admin\AdminForgotPassword.aspx" />
+    <Content Include="Admin\AdminForgotPasswordP2.aspx" />
+    <Content Include="Admin\AdminHome.aspx" />
+    <Content Include="Admin\AdminInfoDelete.aspx" />
+    <Content Include="Admin\AdminInfoUpdate.aspx" />
+    <Content Include="Admin\AdminInfoView.aspx" />
+    <Content Include="Admin\AdminLoginPage.aspx" />
+    <Content Include="Admin\AdminClothesView.aspx" />
+    <Content Include="Admin\AdminMachineCreate.aspx" />
+    <Content Include="Admin\AdminMachineDelete.aspx" />
+    <Content Include="Admin\AdminMachineUpdate.aspx" />
+    <Content Include="Admin\AdminMachineView.aspx" />
+    <Content Include="Admin\AdminMemberUpdate.aspx" />
+    <Content Include="Admin\AdminMemberView.aspx" />
+    <Content Include="Admin\AdminTechCreate.aspx" />
+    <Content Include="Admin\AdminTechDelete.aspx" />
+    <Content Include="Admin\AdminTechUpdate.aspx" />
+    <Content Include="Admin\AdminTechView.aspx" />
+    <Content Include="App_Data\FYPdatabase.mdf" />
+    <Content Include="App_Data\FYPdatabase_log.ldf">
+      <DependentUpon>FYPdatabase.mdf</DependentUpon>
+    </Content>
+    <Content Include="image\button_change-password.png" />
+    <Content Include="image\button_sign-in.png" />
+    <Content Include="image\button_submit.png" />
+    <Content Include="image\button_update.png" />
+    <Content Include="image\button_view.png" />
+    <Content Include="image\delete_button.png" />
+    <Content Include="image\FYP logo.png" />
+    <Content Include="image\login_background.jpg" />
+    <Content Include="image\login_background1.jpg" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Master.designer.vb">
+      <DependentUpon>Admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.Master.vb">
+      <DependentUpon>Admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminChangePassword.aspx.designer.vb">
+      <DependentUpon>AdminChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminChangePassword.aspx.vb">
+      <DependentUpon>AdminChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminClothesCreate.aspx.designer.vb">
+      <DependentUpon>AdminClothesCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminClothesCreate.aspx.vb">
+      <DependentUpon>AdminClothesCreate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminClothesDelete.aspx.designer.vb">
+      <DependentUpon>AdminClothesDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminClothesDelete.aspx.vb">
+      <DependentUpon>AdminClothesDelete.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminClothesUpdate.aspx.designer.vb">
+      <DependentUpon>AdminClothesUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminClothesUpdate.aspx.vb">
+      <DependentUpon>AdminClothesUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminColourCreate.aspx.designer.vb">
+      <DependentUpon>AdminColourCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminColourCreate.aspx.vb">
+      <DependentUpon>AdminColourCreate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminColourUpdate.aspx.designer.vb">
+      <DependentUpon>AdminColourUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminColourUpdate.aspx.vb">
+      <DependentUpon>AdminColourUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDesignVerify.aspx.designer.vb">
+      <DependentUpon>AdminDesignVerify.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminDesignVerify.aspx.vb">
+      <DependentUpon>AdminDesignVerify.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminInfoCreate.aspx.designer.vb">
+      <DependentUpon>AdminInfoCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminInfoCreate.aspx.vb">
+      <DependentUpon>AdminInfoCreate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDesignCreate.aspx.designer.vb">
+      <DependentUpon>AdminDesignCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminDesignCreate.aspx.vb">
+      <DependentUpon>AdminDesignCreate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDesignDelete.aspx.designer.vb">
+      <DependentUpon>AdminDesignDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminDesignDelete.aspx.vb">
+      <DependentUpon>AdminDesignDelete.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDesignUpdate.aspx.designer.vb">
+      <DependentUpon>AdminDesignUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminDesignUpdate.aspx.vb">
+      <DependentUpon>AdminDesignUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminDesignView.aspx.designer.vb">
+      <DependentUpon>AdminDesignView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminDesignView.aspx.vb">
+      <DependentUpon>AdminDesignView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminForgotPassword.aspx.designer.vb">
+      <DependentUpon>AdminForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminForgotPassword.aspx.vb">
+      <DependentUpon>AdminForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminForgotPasswordP2.aspx.designer.vb">
+      <DependentUpon>AdminForgotPasswordP2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminForgotPasswordP2.aspx.vb">
+      <DependentUpon>AdminForgotPasswordP2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminHome.aspx.designer.vb">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminHome.aspx.vb">
+      <DependentUpon>AdminHome.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminInfoDelete.aspx.designer.vb">
+      <DependentUpon>AdminInfoDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminInfoDelete.aspx.vb">
+      <DependentUpon>AdminInfoDelete.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminInfoUpdate.aspx.designer.vb">
+      <DependentUpon>AdminInfoUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminInfoUpdate.aspx.vb">
+      <DependentUpon>AdminInfoUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminInfoView.aspx.designer.vb">
+      <DependentUpon>AdminInfoView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminInfoView.aspx.vb">
+      <DependentUpon>AdminInfoView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLoginPage.aspx.designer.vb">
+      <DependentUpon>AdminLoginPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminLoginPage.aspx.vb">
+      <DependentUpon>AdminLoginPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminLoginSession.vb" />
+    <Compile Include="Admin\AdminClothesView.aspx.designer.vb">
+      <DependentUpon>AdminClothesView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminClothesView.aspx.vb">
+      <DependentUpon>AdminClothesView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMachineCreate.aspx.designer.vb">
+      <DependentUpon>AdminMachineCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMachineCreate.aspx.vb">
+      <DependentUpon>AdminMachineCreate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMachineDelete.aspx.designer.vb">
+      <DependentUpon>AdminMachineDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMachineDelete.aspx.vb">
+      <DependentUpon>AdminMachineDelete.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMachineUpdate.aspx.designer.vb">
+      <DependentUpon>AdminMachineUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMachineUpdate.aspx.vb">
+      <DependentUpon>AdminMachineUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMachineView.aspx.designer.vb">
+      <DependentUpon>AdminMachineView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMachineView.aspx.vb">
+      <DependentUpon>AdminMachineView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMemberUpdate.aspx.designer.vb">
+      <DependentUpon>AdminMemberUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMemberUpdate.aspx.vb">
+      <DependentUpon>AdminMemberUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminMemberView.aspx.designer.vb">
+      <DependentUpon>AdminMemberView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminMemberView.aspx.vb">
+      <DependentUpon>AdminMemberView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminTechCreate.aspx.designer.vb">
+      <DependentUpon>AdminTechCreate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminTechCreate.aspx.vb">
+      <DependentUpon>AdminTechCreate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminTechDelete.aspx.designer.vb">
+      <DependentUpon>AdminTechDelete.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminTechDelete.aspx.vb">
+      <DependentUpon>AdminTechDelete.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminTechUpdate.aspx.designer.vb">
+      <DependentUpon>AdminTechUpdate.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminTechUpdate.aspx.vb">
+      <DependentUpon>AdminTechUpdate.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminTechView.aspx.designer.vb">
+      <DependentUpon>AdminTechView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\AdminTechView.aspx.vb">
+      <DependentUpon>AdminTechView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Admin\Admin.Master" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <Content Include="packages.config" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60802</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60802/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
